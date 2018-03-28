@@ -42,12 +42,12 @@ else:
         raise 
       result, _ = sampler.predict_greedy(model, np.array([img]))
       result = result.replace(START_TOKEN, "").replace(END_TOKEN, "")
-      print("P: "+result) #*******************************************************************
+      #print("P: "+result) #*******************************************************************
       predicted.append(result.split())
       file_name = f[:-4]
       with open("{}/{}.gui".format(evaluation_data_dir, file_name), 'r') as gui:
         context = gui.read()
-        print("A: "+context) #******************************
+        #print("A: "+context) #******************************
         reference.append([context.split()])
   bleu = corpus_bleu(reference, predicted)
   print(bleu)
