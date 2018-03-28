@@ -37,8 +37,8 @@ cd img2code
 #provide the saved weight file in previous training if you don't want to train from scratch
 train.py <input_dir> <output_dir> <use_generator:optional> <pretrained_model:optional>
 ```
-A light-weighted training dataset containing 100 image-token file pairs are provided. The full datasets containing 1500 training pairs can be downloaded [here](https://github.com/tonybeltramelli/pix2code.git)
-Using Tesla K80 GPU, it takes about 210 s to train one epoch on the light-weighted dataset with batch size 64 and context size 48.
+A light-weight training dataset containing 100 image-token file pairs are provided. The full datasets containing 1500 training pairs can be downloaded [here](https://github.com/tonybeltramelli/pix2code.git)  
+Using Tesla K80 GPU, it takes about 210 s to train one epoch on the light-weight dataset with batch size 64 and context size 48.
 ## Evaluate training result
 ```
 #provide the <trained weight dir> which contains the saved model. Usually same as <output_dir> in the training stage
@@ -46,8 +46,8 @@ Using Tesla K80 GPU, it takes about 210 s to train one epoch on the light-weight
 #provide <evaluation data dir> with the folder that stores the evaluation image-token file pairs
 evaluate.py <trained weights dir> default_name <evaluation data dir>
 ```
-After trained for 120 epoches, both one-hot version and embedding version shows loss around 0.01. The bleu score for one-hot version and embedding version are 0.31 and 0.32, respectively.
-Trained with such a small amount of data, the model is expected to have severe over-fitting problem. The performance may be improved if trained with large dataset.
+After trained for 120 epochs, both one-hot version and embedding version shows loss around 0.01. The bleu score for one-hot version and embedding version are 0.31 and 0.32, respectively.  
+Trained with such a small amount of data, the model must suffer from severe over-fitting problem. The performance is expected be further improved if trained with large dataset.
 
 ## Convert webpage image to html codes
 ```
