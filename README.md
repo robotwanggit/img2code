@@ -47,7 +47,7 @@ Using Tesla K80 GPU, it takes about 210 s to train one epoch on the light-weight
 evaluate.py <trained weights dir> default_name <evaluation data dir>
 ```
 After trained for 120 epochs, both one-hot version and embedding version shows loss around 0.01. The bleu score for one-hot version and embedding version are 0.31 and 0.32, respectively.  
-Trained with such a small amount of data, the model must suffer from severe over-fitting problem. The performance is expected be further improved if trained with large dataset.
+Trained with a small amount of data, the model must suffer from severe over-fitting problem. The performance is expected be further improved if trained with large dataset.
 
 ## Convert webpage image to html codes
 ```
