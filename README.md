@@ -24,8 +24,8 @@ Compared to Tony's version, evaluation with BLEU score is added to evaluate the 
 ## Model Structure
 The img2code model is composed of an encoder and decoder. The encoder contains CNN and LSTM networks in parrallel, which encodes into features the webpage screenshot image and tokens sequences. The features of image/token inputs are then concatenated together and provide into the decoder.  
 The decoder is an LSTM network, which infers tokens one by one.   
-In the training stage, the screenshot image and the corresponding token sequences are both provided to train the model. In the prediction stage, only webpage image is needed and the generated token sequences can be compiled into html codes by the Compiler.
-The structure of img2pix model using word embedding is as below
+In the training stage, the screenshot image and the corresponding token sequences are both provided to train the model. In the prediction stage, only webpage image is needed. The generated token sequences can be compiled into html codes by the Compiler.
+The structure of img2code model using word embedding is as below
 <p align="center"><img src="/structure.jpg?raw=true" width="400px"></p>
 
 ## Train model
