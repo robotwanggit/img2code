@@ -30,7 +30,7 @@ The structure of img2code model using word embedding is as below
 
 ## Train model
 ```
-cd img2code
+cd img2code/embedding version
 
 #provide input dir containing training data and output dir to save trained model and metadata
 #provide non-zero number for use_generatator if training data are too large to be loaded into memory all at once
